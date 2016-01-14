@@ -5,3 +5,29 @@
 <p>I will be blogging about all the pho places I'm going to try in the metropolitan areas of Maryland</p>
 
 <p>Feel free to leave your own reviews or comments. I want to see what you think!</p>
+
+<!-- Let's also create a container for our map -->
+<div id="map"></div>
+
+<%= map(:center => {
+  :latlng => [38.9038829, -77.0360032],
+  :zoom => 18
+}) %>
+
+<script>
+
+// 	var myMap = L.map('map').setView([38.9038829, -77.0360032], 11);
+
+// 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+// 	    maxZoom: 18,
+// 	    id: 'dennizzy.okh88pa0',
+// 	    accessToken: 'pk.eyJ1IjoiZGVubml6enkiLCJhIjoiY2lqMzhvMGN2MDA0a3V4a25jNTI4djlwNCJ9.9FWVBfT-qV2a0qee4Qbzag'
+// 	}).addTo(myMap);
+
+// 	<% @phos.each do |pho| %>
+// 		var marker = L.marker(
+// 			[<%= pho.latitude %>, <%= pho.longitude %>]
+// 			).addTo(myMap)
+// 	<% end %>
+
+</script>
