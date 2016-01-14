@@ -1,0 +1,7 @@
+<!-- <%= link_to "Create a new pho", new_pho_path %> -->
+<ul>
+	<% @phos.each do |pho| %>
+			<div id="phoName"><%= link_to pho.name, pho %></div>
+			<div><%= image_tag pho.img_url %></div>
+	<% end %>
+</ul>

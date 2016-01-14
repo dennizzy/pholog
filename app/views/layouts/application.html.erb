@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Phologs</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<%= stylesheet_link_tag "http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" %>
+</head>
+<body>
+	<nav>
+		<a href="/">Home</a>
+	    <a href="/phos">Reviews</a>
+	    <div class="user-info">
+	      <% if current_user %>
+	        Welcome, <%= current_user.email %>
+	        <%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
+	      <% else %>
+	        <%= link_to 'Signup', new_user_registration_path %>
+	        <%= link_to 'Login', new_user_session_path %>
+	      <% end %>      
+	    </div>
+	</nav>
+
+	<h1>Phologs</h1>
+	<!--<%= image_tag "http://cdn.shopify.com/s/files/1/0152/7713/products/FOOTBALL_Transparent_Element_copy_1024x1024.jpg?v=1343300540" %> -->
+	<%= yield %>
+
+	<!-- Let's also create a container for our map -->
+	<div id="map"></div>
+	<!-- Leaflet script -->
+	<%= javascript_include_tag 'http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js' %>
+	<!-- Our script -->
+	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+</body>
+</html>

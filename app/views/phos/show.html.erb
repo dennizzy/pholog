@@ -1,0 +1,12 @@
+<h2><%= @pho.name %></h2>
+
+<p><%= @pho.location %></p>
+
+<%= image_tag @pho.img_url %>
+
+<p><strong>Rating: </strong><%= @pho.rating %></p>
+
+<p><%= @pho.review %></p>
+
+<p><%= link_to "Edit", edit_pho_path(@pho) %>
+<%= link_to "Delete", pho_path(@pho), method: :delete %> </p>
