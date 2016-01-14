@@ -1,18 +1,32 @@
-<p>Hello everyone</p>
-
 <p>Welcome to Phologs</p>
 
 <p>I will be blogging about all the pho places I'm going to try in the metropolitan areas of Maryland</p>
 
-<p>Feel free to leave your own reviews or comments. I want to see what you think!</p>
+<p>Check out the <strong>Reviews</strong> page to read my latest adventure. Feel free to leave your own reviews or comments. I want to see what you think!</p>
+
+<p><strong>Last Pho Place</strong>: Pho Hung and Grill</p>
 
 <!-- Let's also create a container for our map -->
-<div id="map"></div>
-
-<%= map(:center => {
-  :latlng => [38.9038829, -77.0360032],
-  :zoom => 18
-}) %>
+	<%= map(:center => {
+		:latlng => [39.083349, -76.952033],
+		:zoom => 11
+	},
+		:max_zoom => 18,
+		:markers => [
+	    {
+	       :latlng => [39.083349, -76.952033],
+	       :popup => "Hello!"
+	    },
+	    {
+	       :latlng => [39.03356, -76.909335],
+	       :popup => "Hello!"
+	    },
+	    {
+	       :latlng => [39.042059, -76.991554],
+	       :popup => "Hello!"
+	    }	    
+	  ]
+	) %>
 
 <script>
 

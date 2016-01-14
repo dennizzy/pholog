@@ -7,5 +7,5 @@
 # }).addTo(myMap);
 
 Leaflet.tile_layer = "https://api.tiles.mapbox.com/v4/dennizzy.okh88pa0/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGVubml6enkiLCJhIjoiY2lqMzhvMGN2MDA0a3V4a25jNTI4djlwNCJ9.9FWVBfT-qV2a0qee4Qbzag"
-Leaflet.max_zoom = 11
+Leaflet.max_zoom = 18
 # Leaflet.id = "dennizzy.okh88pa0"
