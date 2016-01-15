@@ -13,7 +13,7 @@ class PhosController < ApplicationController
 	end
 
 	def create
-		@pho = Pho.create(doughnut_params)
+		@pho = Pho.create(pho_params)
 		redirect_to @pho
 	end
 
@@ -23,13 +23,13 @@ class PhosController < ApplicationController
 
 	def update
 		@pho = Pho.find(params[:id])
-		@pho.update(doughnut_params)
+		@pho.update(pho_params)
 		redirect_to @pho
 	end
 
 	def destroy
 		@pho = Pho.find(params[:id])
-		Pho.destroy
+		@pho.comments.destroy
 		redirect_to phos_path
 	end
 

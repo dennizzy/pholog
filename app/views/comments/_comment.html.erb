@@ -1,0 +1,6 @@
+<div id="containRating">
+	<div id="mainRating"><strong>Name</strong>: <%= comment.your_name %></div>
+	<div id="mainRating"><strong>Your Rating</strong>: <%= comment.your_rating %></div>
+	<div id="mainRating"><strong>Review</strong>: <%= comment.your_review %></div>
+	<%= link_to "Delete", @pho_comment_path, method: :delete %>
+</div>

@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'cancancan', '~> 1.10'
 gem 'leaflet-rails'
 gem 'geocoder'
 gem 'devise'

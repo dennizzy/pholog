@@ -138,3 +138,8 @@ a.no-fav {
  #map {
   height: 500px;    /* Let's give our map a height so we can see it. */
 }
+
+  #containRating {
+    padding-bottom: 2em;
+    padding-left: 2em;
+  }

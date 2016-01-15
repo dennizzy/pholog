@@ -1,0 +1,12 @@
+<%= form_for [@pho, @comment] do |f| %>
+	<p><%= f.label :your_name %>
+	<%= f.text_field :your_name %></p>
+	
+	<p><%= f.label :your_rating %>
+	<%= f.text_field :your_rating %></p>
+	
+	<p><%= f.label :your_review %>
+	<%= f.text_field :your_review %></p>
+	
+	<%= f.submit %>
+<% end %>
