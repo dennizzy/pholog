@@ -28,10 +28,11 @@ class CommentsController < ApplicationController
 	# end
 
 	def destroy
-		@comment = pho.comment.find(params[:pho_id])
-		authorize! :destroy, @pho.comment
-		@pho.comment.destroy
-		redirect_to phos_path
+		@comment = Comment.find(params[:id])
+		@pho = Pho.find(params[:pho_id])
+		authorize! :destroy, @comment
+		@comment.destroy
+		redirect_to @pho
 	end
 
 	private
